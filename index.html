@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Catastro - Demo</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body { margin: 0; }
+    #map { height: 100vh; width: 100vw; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="lotes.json"></script>
+
+<script>
+  const map = L.map('map').setView([-34.60, -58.38], 14);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19
+  }).addTo(map);
+
+  // Lotes cargados desde lotes.json (archivo estático en el mismo repo)
+  L.geoJSON(lotes, {
+    style: {
+      color: "red",
+      weight: 2,
+      fillOpacity: 0.1
+    },
+    onEachFeature: (feature, layer) => {
+      layer.bindPopup(feature.properties.nombre);
+    }
+  }).addTo(map);
+</script>
+
+</body>
+</html>
+

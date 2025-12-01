@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+  {"type":"Feature","properties":{"nombre":"Lote A"},"geometry":{"type":"Polygon","coordinates":[[[-58.380,-34.600],[-58.379,-34.600],[-58.379,-34.599],[-58.380,-34.599],[-58.380,-34.600]]]}},
+  {"type":"Feature","properties":{"nombre":"Lote B"},"geometry":{"type":"Polygon","coordinates":[[[-58.381,-34.600],[-58.380,-34.600],[-58.380,-34.599],[-58.381,-34.599],[-58.381,-34.600]]]}},
+  {"type":"Feature","properties":{"nombre":"Lote C"},"geometry":{"type":"Polygon","coordinates":[[[-58.380,-34.601],[-58.379,-34.601],[-58.379,-34.600],[-58.380,-34.600],[-58.380,-34.601]]]}}
+]}
